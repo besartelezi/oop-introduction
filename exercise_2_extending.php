@@ -2,6 +2,34 @@
 
 declare(strict_types=1);
 
+class Beverage {
+    public string $color;
+    public float $price = 0;
+    public string $temperature = "cold";
+
+    public function __construct(string $color, float $price, string $temperature) {
+        $this ->color =$color;
+        $this->price = $price;
+        $this->temperature = $temperature;
+    }
+
+    public function getInfoBeverage () :string {
+        return("this beverage is " . $this->temperature . " and " . $this->color);
+    }
+}
+$cola = new Beverage("black", 2, "cold");
+print_r ($cola->getInfoBeverage());
+
+class Beer extends Beverage {
+    private string $name;
+    private float $alcoholPercentage = 0;
+
+    public function __construct(string $name, float $alcoholPercentage) {
+
+    }
+
+}
+
 /* EXERCISE 2
 
 TODO: Make class beer that extends from Beverage.

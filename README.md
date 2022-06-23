@@ -1,2 +1,7 @@
-# oop-introduction
-Some introductory exercises to learn a bit more about Object Oriented Programming.
+# OOP - Object Oriented Programming
+###### Or Ogres (love) Onion Peeling for the cultured programmers among us!
+For this challenge, I have to finish some exercises to learn a bit more about Object Oriented Programming.
+I tried working with classes in the past, but it was still a bit too complicated for me.
+So I'm really looking forward to this challenge, because OOP is something I really want to learn how to do!
+
+## Exercise 1: "Programming with class(es)."

@@ -14,22 +14,32 @@ class Beverage {
     }
 
     public function getInfoBeverage () :string {
-        return("this beverage is " . $this->temperature . " and " . $this->color);
+        return("this beverage is " . $this->temperature . " and " . $this->color . " ");
     }
 }
 $cola = new Beverage("black", 2, "cold");
-print_r ($cola->getInfoBeverage());
+print_r ($cola->getInfoBeverage() . "<br>");
 
 class Beer extends Beverage {
-    private string $name;
-    private float $alcoholPercentage = 0;
+    public string $name;
+    public float $alcoholPercentage = 0;
 
-    public function __construct(string $name, float $alcoholPercentage) {
-
+    public function __construct(string $color, float $price, string $temperature, string $name, float $alcoholPercentage)
+    {
+        parent::__construct($color, $price, $temperature);
+        $this->name = $name;
+        $this->alcoholPercentage= $alcoholPercentage;
     }
 
+    public function getAlcoholPercentage () :float {
+        return $this->alcoholPercentage;
+    }
 }
-
+$Duvel = new Beer("blond", 3.5, "cold", "Duvel", 8.5);
+print_r($Duvel->getAlcoholPercentage() . "%" . "<br>");
+echo($Duvel->getAlcoholPercentage() . "%" . "<br>");
+print_r($Duvel->color. "<br>");
+print_r($Duvel->getInfoBeverage() . "<br>");
 /* EXERCISE 2
 
 TODO: Make class beer that extends from Beverage.

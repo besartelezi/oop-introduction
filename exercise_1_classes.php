@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 class Beverage {
     public string $color;
-    public int $price = 0;
+    public float $price = 0;
     public string $temperature = "cold";
 
-    public function __construct(string $color, int $price, string $temperature) {
+    public function __construct(string $color, float $price, string $temperature) {
         $this ->color =$color;
         $this->price = $price;
         $this->temperature = $temperature;
@@ -18,7 +18,7 @@ class Beverage {
     }
 }
 $cola = new Beverage("black", 2, "cold");
-print_r ($cola->getInfoBeverage());
+print_r ($cola->getInfoBeverage() . "<br>");
 
 
 /* EXERCISE 1

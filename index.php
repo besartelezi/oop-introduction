@@ -15,5 +15,5 @@ if(isset($_GET['page'])){
 }
 //create a form, method = GET, when user selects one of the options they go to the selected page
 ?>
- <button method ="get" formmethod="get"></button>
+ <button method ="get" formmethod="get" name ="classes">Classes</button>
 

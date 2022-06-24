@@ -23,12 +23,16 @@ print_r ($cola->getInfoBeverage() . "<br>");
 class Beer extends Beverage {
     public string $name;
     public float $alcoholPercentage = 0;
+    //A new class, that is a child of the Beverage class
+    //Child classes can inherit all the properties of the parent class, but, the parent class can't access the properties of it's children
 
     public function __construct(string $color, float $price, string $temperature, string $name, float $alcoholPercentage)
     {
         parent::__construct($color, $price, $temperature);
         $this->name = $name;
         $this->alcoholPercentage= $alcoholPercentage;
+        //the 'Beer' class inherits the properties of it's parent class 'Beverage'
+
     }
 
     public function getAlcoholPercentage () :float {

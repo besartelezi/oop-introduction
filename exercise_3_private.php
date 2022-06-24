@@ -3,9 +3,13 @@
 declare(strict_types=1);
 
 class Beverage {
-    public string $color;
-    public float $price = 0;
-    public string $temperature = "cold";
+    //the properties were set from 'public' to 'private'
+    //this means that you can't access them the same way you access public properties
+    //we need to use getters to access them, and setters if we want to change their values
+    private string $color;
+    private float $price = 0;
+    private string $temperature = "cold";
+
 
     public function __construct(string $color, float $price, string $temperature) {
         $this ->color =$color;
@@ -13,10 +17,12 @@ class Beverage {
         $this->temperature = $temperature;
     }
 
+    //setter that makes it possible to set a new value for the color property
     public function setColor ($Duvel) {
         $this->color = $Duvel;
     }
 
+    //getters get the needed properties from private and return them, so the user can see it
     public function getColor() :string {
         return $this->color;
     }
@@ -34,8 +40,8 @@ class Beverage {
 }
 
 class Beer extends Beverage {
-    public string $name;
-    public float $alcoholPercentage = 0;
+    private string $name;
+    private float $alcoholPercentage = 0;
 
     public function __construct(string $color, float $price, string $temperature, string $name, float $alcoholPercentage)
     {
@@ -51,9 +57,12 @@ class Beer extends Beverage {
     public function getAlcoholPercentage () :float {
         return $this->alcoholPercentage;
     }
+    //Since the properties are private, we can only access them by calling the getter that returns them
     private function beerInfo () :string {
         return("Hi I'm " . $this->getName() . " and I have an alcohol percentage of " .$this->getAlcoholPercentage() . " and I have a " . $this->getColor() . " color." );
     }
+
+
     public function getBeerInfo () :string{
         return $this->beerInfo();
     }
@@ -61,7 +70,7 @@ class Beer extends Beverage {
 $Duvel = new Beer("blond", 3.5, "cold", "Duvel", 8.5);
 print_r($Duvel->getAlcoholPercentage() . "%" . "<br>");
 echo($Duvel->getAlcoholPercentage() . "%" . "<br>");
-print_r($Duvel->color. "<br>");
+print_r($Duvel->getColor(). "<br>");
 print_r($Duvel->getInfoBeverage() . "<br>");
 $Duvel->setColor("light");
 print_r($Duvel->getInfoBeverage() . "<br>");

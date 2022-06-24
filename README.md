@@ -86,3 +86,30 @@ private function beerInfo () :string {
 }
 ````
 This exercise perfectly encapsulates the difference between private and protected properties.
+
+## Exercise 5: "PUBLIC: Pretty Unsightly Behaviour (from those) Losers In Chicago"
+###### Sorry for the weird title I just really like inventing acronyms.
+First I copied everything from exercise 1, and then I turned all public properties to private.
+If any bugs or errors were caused because of this, I had to solve them without using getters or setters.
+Thankfully, there were no errors or bugs.
+
+Then I had to adjust the price of one of the objects, without using setters or getters.
+This was a lot of brainwork, I first thought I might have to edit the constructor in some way.
+This however was not the case, I had to add a function that will return a string with the new price in it.
+
+I learned a lot of new things from this exercise as well.
+I discovered that you can create new variable in between the brackets of the function, and use this in the function that you are creating.
+Practice is essential, since I've only used the code this way just once, I'm sure I won't remember all the details of what I did.
+What I won't forget however, is for what I can use this way of coding for.
+
+
+````
+public function theEconomyIsInShambles (float $newPrice) :string {
+    if ($this->price < $newPrice) {
+        return ("The new price is " . $newPrice);
+    }
+    else {
+       return ("Stop! You have violated the Law!");
+    }
+}
+````

@@ -66,7 +66,7 @@ And I was right, I couldn't print it.
 At least if I couldn't print it if I wasn't paying attention the entire darn time I was making these exercises!
 I realized I needed to create a public function that return the private method, and print that public function instead.
 
-## Exercise 4: "Protected"
+## Exercise 4: "Protect and Serve (beers)!"
 Now I had to change all private properties to protected properties, fix all errors that might occur, and not call any getters from the child class.
 After I changed all the properties, I saw that one line of code wasn't working properly.
 That was because I had used $Duvel->color, instead of $Duvel->getColor().
@@ -113,3 +113,20 @@ public function theEconomyIsInShambles (float $newPrice) :string {
     }
 }
 ````
+
+## Exercise 6: "Constant-ly Coming Up With Funny Titles"
+Constants are a relatively easier concept to understand, since we've been working with constants in Javascript the entire time.
+They are similar, in that they both have a value that does not change.
+But, the way they are used is different in both languages.
+In PHP, as far as I know, constants are automatically global across the entire script.
+
+As of right now, I'm still not sure in what circumstances I need to use constants.
+In the example given to us, the constant was the name of the bar.
+The name of the bar is important for the beverages and the drinks.
+So by that logic, a constant is something that's necessary for every single piece of information in your code.
+I still do not completely understand it though, so I'll be looking through some stuff on the internet until I have a better understanding of this concept.
+
+## Final Thoughts
+Overall, I'm quite happy with the way I tackled these exercises and what I was able to learn from them.
+Like I mentioned earlier, understanding classes and doing OOP are two things I really wanted to learn.
+Now I have come one step closer to becoming a way better Web Developer.

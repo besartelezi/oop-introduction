@@ -7,7 +7,8 @@ class Beverage {
     private float $price = 0;
     private string $temperature = "cold";
 
-    //I'm still not quite sure what purpose a constant could serve
+    //Constants are identifiers for simple values
+    //But the thing that sets them the most apart, is that they are automatically global across the entire script.
     const BARNAME= "Het Vervolg";
 
     public function __construct(string $color, float $price, string $temperature) {
@@ -49,6 +50,10 @@ class Beer extends Beverage {
 }
 $Duvel = new Beer("blond", 3.5, "cold", "Duvel", 8.5);
 print_r(Beverage::BARNAME . "<br>");
+
+print_r($cola->getBarnameBeverage() . "<br>");
+print_r($Duvel->getBarnameBeer() . "<br>");
+
 /* EXERCISE 6
 
 Copy the classes of exercise 2.

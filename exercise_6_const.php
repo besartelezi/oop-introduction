@@ -7,6 +7,9 @@ class Beverage {
     private float $price = 0;
     private string $temperature = "cold";
 
+    //I'm still not quite sure what purpose a constant could serve
+    const BARNAME= "Het Vervolg";
+
     public function __construct(string $color, float $price, string $temperature) {
         $this ->color =$color;
         $this->price = $price;
@@ -16,9 +19,13 @@ class Beverage {
     public function getInfoBeverage () :string {
         return("this beverage is " . $this->temperature . " and " . $this->color . " ");
     }
+
+    public function getBarnameBeverage () : string{
+        return ("Welcome to the extravagant bar, " . self::BARNAME);
+    }
+
 }
 $cola = new Beverage("black", 2, "cold");
-print_r ($cola->getInfoBeverage() . "<br>");
 
 class Beer extends Beverage {
     private string $name;
@@ -34,13 +41,14 @@ class Beer extends Beverage {
     public function getAlcoholPercentage () :float {
         return $this->alcoholPercentage;
     }
+
+    public function getBarnameBeer () : string{
+        return ("Welcome to the extravagant bar, " . self::BARNAME . " where we serve cold beers to hot dears!");
+    }
+
 }
 $Duvel = new Beer("blond", 3.5, "cold", "Duvel", 8.5);
-print_r($Duvel->getAlcoholPercentage() . "%" . "<br>");
-echo($Duvel->getAlcoholPercentage() . "%" . "<br>");
-print_r($Duvel->color. "<br>");
-print_r($Duvel->getInfoBeverage() . "<br>");
-
+print_r(Beverage::BARNAME . "<br>");
 /* EXERCISE 6
 
 Copy the classes of exercise 2.

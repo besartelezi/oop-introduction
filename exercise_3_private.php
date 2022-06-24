@@ -62,7 +62,8 @@ class Beer extends Beverage {
         return("Hi I'm " . $this->getName() . " and I have an alcohol percentage of " .$this->getAlcoholPercentage() . " and I have a " . $this->getColor() . " color." );
     }
 
-
+    //we needed to make a private method and try to print that
+    //since it's private however, it wouldn't work, so I created a public function that returns the private method
     public function getBeerInfo () :string{
         return $this->beerInfo();
     }

@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 class Beverage {
+    //protected attributes are similar to private properties
+    //their main difference, is that with protected attributes, children of the class can access their parents protected attributes directly
     protected string $color;
     protected float $price = 0;
     protected string $temperature = "cold";

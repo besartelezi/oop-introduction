@@ -50,3 +50,20 @@ public function __construct(string $color, float $price, string $temperature, st
 
 ## Exercise 3: "The Pirate Exercise"
 ![charlie day](images/charlie-pirate.webp)
+
+For the ~~pirate~~ - I mean the private exercise I had to make all properties private, and then still make all the code work.
+The hardest part about this exercise, was the same thing that I've been struggling with regarding all exercises so far.
+And that is, knowing how to write the code.
+Thankfully, this is something that just keeps getting easier and easier as time goes on.
+
+Once I wrote down all the getter functions, the code started working again smoothly.
+The next challenge was using the setters.
+Setters, quite literally, set a new value for the object (please do correct me if I'm wrong on this one).
+
+The final task of this exercise, was to create a new private method and then to print this method.
+I was wondering if we could even print private methods, since they are, you know, **private**.
+And I was right, I couldn't print it.
+At least if I couldn't print it if I wasn't paying attention the entire darn time I was making these exercises!
+I realized I needed to create a public function that return the private method, and print that public function instead.
+
+## Exercise 4: 

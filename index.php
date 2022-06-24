@@ -33,10 +33,10 @@ if(isset($_GET['page'])){
 ?>
 <form action ="index.php" method="get">
     <button type="submit" name ="page" value ="classes">Classes</button>
-    <button type="submit" name ="page" value ="extending">extending</button>
-    <button type="submit" name ="page" value ="private">private</button>
-    <button type="submit" name ="page" value ="protected">protected</button>
-    <button type="submit" name ="page" value ="public">public</button>
-    <button type="submit" name ="page" value ="const">const</button>
-    <button type="submit" name ="page" value ="static">static</button>
+    <button type="submit" name ="page" value ="extending">Extending</button>
+    <button type="submit" name ="page" value ="private">Private</button>
+    <button type="submit" name ="page" value ="protected">Protected</button>
+    <button type="submit" name ="page" value ="public">Public</button>
+    <button type="submit" name ="page" value ="const">Const</button>
+    <button type="submit" name ="page" value ="static">Static</button>
 </form>

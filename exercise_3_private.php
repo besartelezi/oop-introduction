@@ -13,12 +13,26 @@ class Beverage {
         $this->temperature = $temperature;
     }
 
+    public function setColor ($Duvel) {
+        $this->color = $Duvel;
+    }
+
+    public function getColor() :string {
+        return $this->color;
+    }
+    public function getPrice() :float {
+        return $this->price;
+    }
+    public function getTemperature () :string {
+        return $this->temperature;
+    }
+
+
     public function getInfoBeverage () :string {
         return("this beverage is " . $this->temperature . " and " . $this->color . " ");
     }
+
 }
-$cola = new Beverage("black", 2, "cold");
-print_r ($cola->getInfoBeverage() . "<br>");
 
 class Beer extends Beverage {
     public string $name;
@@ -31,8 +45,18 @@ class Beer extends Beverage {
         $this->alcoholPercentage= $alcoholPercentage;
     }
 
+    public function getName () :string {
+        return $this->name;
+    }
+
     public function getAlcoholPercentage () :float {
         return $this->alcoholPercentage;
+    }
+    private function beerInfo () :string {
+        return("Hi I'm " . $this->getName() . " and I have an alcohol percentage of " .$this->getAlcoholPercentage() . " and I have a " . $this->getColor() . " color." );
+    }
+    public function getBeerInfo () :string{
+        return $this->beerInfo();
     }
 }
 $Duvel = new Beer("blond", 3.5, "cold", "Duvel", 8.5);
@@ -40,6 +64,12 @@ print_r($Duvel->getAlcoholPercentage() . "%" . "<br>");
 echo($Duvel->getAlcoholPercentage() . "%" . "<br>");
 print_r($Duvel->color. "<br>");
 print_r($Duvel->getInfoBeverage() . "<br>");
+$Duvel->setColor("light");
+print_r($Duvel->getInfoBeverage() . "<br>");
+print_r($Duvel->getBeerInfo());
+
+
+
 
 /* EXERCISE 3
 

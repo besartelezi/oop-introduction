@@ -66,4 +66,23 @@ And I was right, I couldn't print it.
 At least if I couldn't print it if I wasn't paying attention the entire darn time I was making these exercises!
 I realized I needed to create a public function that return the private method, and print that public function instead.
 
-## Exercise 4: 
+## Exercise 4: "Protected"
+Now I had to change all private properties to protected properties, fix all errors that might occur, and not call any getters from the child class.
+After I changed all the properties, I saw that one line of code wasn't working properly.
+That was because I had used $Duvel->color, instead of $Duvel->getColor().
+The parent classes can only be accessed through the getter functions, the child classes however, can be accessed normally.
+After I changed that piece of code, I replaced all the instances of me calling something from the child classes from a getter, to just calling them normally.
+
+So I changed this:
+````
+private function beerInfo () :string {
+    return("Hi I'm " . $this->getName() . " and I have an alcohol percentage of " .$this->getAlcoholPercentage() . " and I have a " . $this->getColor() . " color." );
+}
+````
+To this:
+````
+private function beerInfo () :string {
+    return("Hi I'm " . $this->name . " and I have an alcohol percentage of " .$this->alcoholPercentage . " and I have a " . $this->color . " color." );
+}
+````
+This exercise perfectly encapsulates the difference between private and protected properties.

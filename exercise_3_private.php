@@ -27,7 +27,6 @@ class Beverage {
         return $this->temperature;
     }
 
-
     public function getInfoBeverage () :string {
         return("this beverage is " . $this->temperature . " and " . $this->color . " ");
     }
